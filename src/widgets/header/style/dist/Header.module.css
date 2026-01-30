@@ -1,0 +1,86 @@
+.header {
+  width: 100%;
+}
+.header .topBar {
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  padding: 10px 15%;
+}
+.header .topBar .contactInfo {
+  display: flex;
+  gap: 15px;
+}
+.header .topBar a {
+  color: white;
+  text-decoration: none;
+}
+.header .mainHeader {
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15%;
+  border-bottom: 2px solid #ff0000;
+}
+.header .mainHeader .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.header .mainHeader .placeholder {
+  width: 200px;
+  height: 60px;
+  background-color: #eee;
+  text-align: center;
+  line-height: 60px;
+  color: #666;
+}
+.header .navMenu {
+  background-color: #fff;
+  padding: 10px 15%;
+  border-bottom: 1px solid #eee;
+}
+.header .navMenu .navLinks {
+  display: flex;
+  gap: 15px;
+  padding: 0px;
+}
+.header .navMenu .navLinks a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+.header .navMenu .navLinks a:hover {
+  color: #ff0000;
+}
+@media screen and (max-width: 768px) {
+  .header .navMenu .navLinks {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #ff0000 #eee;
+  }
+  .header .navMenu .navLinks li {
+    flex: 0 0 auto;
+    margin-right: 15px;
+  }
+  .header .navMenu .navLinks a {
+    display: block;
+    padding: 5px 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header .topBar,
+.header .mainHeader,
+.header .navMenu {
+    padding: 10px 3%;
+  }
+  .header .mainHeader .logo {
+    font-size: 20px;
+  }
+}

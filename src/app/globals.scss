@@ -1,0 +1,21 @@
+$background: #fff;
+$foreground: #171717;
+
+$background-dark: #0a0a0a;
+$foreground-dark: #ededed;
+
+body {
+  background: $background;
+  color: $foreground;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: $background-dark;
+    color: $foreground-dark;
+  }
+}
+.content {
+  min-height: 700px;
+}

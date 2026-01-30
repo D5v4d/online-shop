@@ -1,0 +1,110 @@
+$color-primary: #ff0000;
+$color-dark-bg: #111;
+$color-main-bg: #000;
+$color-nav-bg: #fff;
+$color-text-light: white;
+$color-text-dark: #333;
+
+.header {
+  width: 100%;
+
+  .topBar {
+    background-color: $color-dark-bg;
+    color: $color-text-light;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 10px 15%;
+
+    .contactInfo {
+      display: flex;
+      gap: 15px;
+    }
+
+    a {
+      color: $color-text-light;
+      text-decoration: none;
+    }
+  }
+
+  .mainHeader {
+    background-color: $color-main-bg;
+    color: $color-text-light;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15%;
+    border-bottom: 2px solid $color-primary;
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .placeholder {
+      width: 200px;
+      height: 60px;
+      background-color: #eee;
+      text-align: center;
+      line-height: 60px;
+      color: #666;
+    }
+  }
+
+  .navMenu {
+    background-color: $color-nav-bg;
+    padding: 10px 15%;
+    border-bottom: 1px solid #eee;
+
+    .navLinks {
+      display: flex;
+      gap: 15px;
+      padding: 0px;
+
+      a {
+        text-decoration: none;
+        color: $color-text-dark;
+        font-weight: 500;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: thin;
+        scrollbar-color: $color-primary #eee;
+
+        li {
+          flex: 0 0 auto;
+          margin-right: 15px;
+        }
+
+        a {
+          display: block;
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+
+    .topBar,
+    .mainHeader,
+    .navMenu {
+      padding: 10px 3%;
+    }
+
+    .mainHeader {
+      .logo {
+        font-size: 20px;
+      }
+    }
+  }
+}

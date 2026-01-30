@@ -1,0 +1,27 @@
+.footer {
+  width: 100%;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+  background: #000;
+}
+
+.content {
+  padding: 15px 15%;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding: 15px 5%;
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    padding: 15px 3%;
+    font-size: 0.8rem;
+  }
+}

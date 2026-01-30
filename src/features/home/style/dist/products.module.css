@@ -1,0 +1,153 @@
+.productContainer {
+  padding: 10px 15%;
+}
+.productContainer .sectionTitle {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .productContainer .sectionTitle {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .productContainer .sectionTitle {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .productContainer .sectionTitle {
+    text-align: center;
+  }
+}
+.productContainer .productList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+@media screen and (max-width: 768px) {
+  .productContainer .productList {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .productContainer .productList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.productCard {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.productCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+.productCard .productImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;
+}
+.productCard .productImage img {
+  width: 100%;
+  height: 200%;
+  object-fit: contain;
+}
+@media screen and (max-width: 480px) {
+  .productCard .productImage {
+    height: 180px;
+  }
+}
+.productCard .productInfo {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.productCard .productInfo .productName {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #212529;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .productCard .productInfo .productName {
+    font-size: 0.95rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .productCard .productInfo .productName {
+    font-size: 0.9rem;
+  }
+}
+.productCard .productInfo .productCategory {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.productCard .productInfo .productPrice {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #ff1b31;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .productCard .productInfo .productPrice {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .productCard .productInfo .productPrice {
+    font-size: 0.95rem;
+  }
+}
+.productCard .productBuy {
+  display: flex;
+  width: 100%;
+}
+.productCard .productBuy button {
+  padding: 0.5rem 1.5rem;
+  background-color: #77ff75;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 1rem auto;
+  transition: all 0.3s ease;
+}
+.productCard .productBuy button:hover {
+  background-color: #66e66b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.productCard .productBuy button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+@media screen and (max-width: 768px) {
+  .productCard .productBuy button {
+    padding: 0.45rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .productCard .productBuy button {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+  }
+}

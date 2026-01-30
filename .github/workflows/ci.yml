@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Клонируем репозиторий
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      # 2. Устанавливаем Node.js 20
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # 3. Устанавливаем зависимости
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Проверка ESLint
+      - name: Run ESLint
+        run: npm run lint
+
+      # 5. Проверка Stylelint
+      - name: Run Stylelint
+        run: npx stylelint "app/**/*.scss" "components/**/*.scss"
+
+      # 6. Проверка Prettier
+      - name: Run Prettier check
+        run: npx prettier --check .
+
+      # 7. Сборка проекта (Next.js)
+      - name: Build Next.js
+        run: npm run build
+
+      # 8. Сборка Docker-образа
+      - name: Build Docker image
+        run: docker build -t online-shop .

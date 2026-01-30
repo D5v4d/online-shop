@@ -1,0 +1,12 @@
+.user {
+    display: flex;
+    gap: 20px;
+
+    button {
+        border: 1px solid white;
+        background: none;
+        padding-left: 8px;
+        padding-right: 8px;
+        border-radius: 10px;
+    }
+}
